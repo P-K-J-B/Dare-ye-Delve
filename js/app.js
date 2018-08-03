@@ -486,7 +486,7 @@ playAgain.addEventListener('click', function reset() {
     }, 300);
 
     setTimeout(function() {
-        overlayImg.src = ''
+        overlayImg.src = '#'
         container.style.cssText = 'opacity: 1'
         overlayMsg.style.cssText = 'margin-bottom: 0;'
         overlayMsg.innerHTML = ''
