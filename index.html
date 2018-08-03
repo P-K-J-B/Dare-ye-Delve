@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dare ye Delve?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--
+___________________________________________________
+TITLE SCREEN -->
+
+	<div class="title-overlay">
+		<div class="title-container">
+			<img class="title-image" src="images/title.png" alt="">
+			<img class="title-type" src="images/dare-ye-delve.png" alt="">
+			<p class="instructions">
+				Use the arrow keys to move around.<br>
+				Dodge the traps to get to the next room.<br>
+				Beat ten rooms to claim the treasure.
+			</p>
+			<p class="start">START</p>
+			<div class="title-bkg"></div>
+		</div>
+	</div>
+
+<!--
+___________________________________________________
+GAME OVER SCREEN -->
+
+	<div class="overlay">
+		<div class="popup">
+			<img class="overlay-image" src="" alt="">
+			<p class="msg"></p>
+			<p class="play-again">Play Again?</p>
+		</div>
+	</div>
+
+<!--
+___________________________________________________
+CONTROL PAD FOR TOUCHSCREEN -->
+
+	<div class="control-pad">
+		<div class="up"></div>
+		<div class="right"></div>
+		<div class="left"></div>
+		<div class="down"></div>
+	</div>
+
+<!--
+___________________________________________________
+GAME WINDOW -->
+
+	<div class="container">
+		<div class="level">
+			<p class="lvl-count">Level: 1</p>
+		</div>
+		<div class="end"></div>
+	</div>
+
+<!--
+___________________________________________________
+-->
+
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+</body>
+</html>
