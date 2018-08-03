@@ -286,6 +286,11 @@ function gameOver(sprite) {
     } else if (sprite === trapTypes[5]) {
         overlayImg.src = 'images/cleaved.png'
     }
+
+    setTimeout(function() {
+        overlayImg.style.cssText = 'opacity: 1'
+    }, 300)
+
     player.y = -1000;
     overlay.style.cssText = 'visibility: visible; opacity: 1'
     control = false;
@@ -487,6 +492,7 @@ playAgain.addEventListener('click', function reset() {
 
     setTimeout(function() {
         overlayImg.src = '#'
+        overlayImg.style.cssText = 'opacity: 0'
         container.style.cssText = 'opacity: 1'
         overlayMsg.style.cssText = 'margin-bottom: 0;'
         overlayMsg.innerHTML = ''
