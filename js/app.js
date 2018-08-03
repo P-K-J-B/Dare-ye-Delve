@@ -68,6 +68,7 @@ const Sprite = function(x, y) {
 Note that, when drawing to the canvas, the first coordinate is set to sx, 
 changing the value of sx allows us to move across all sprite sheets. */
 Sprite.prototype.render = function() {
+    ctx.imageSmoothingQuality = "high"
     ctx.drawImage(Resources.get(this.sprite), sx, 0, 100, 170, this.x, this.y, this.width, this.height);
 };
 
@@ -120,7 +121,7 @@ Trap.prototype.update = function(dt) {
         if (mob) {
             if (t.x > container.offsetWidth) {
                 t.x = -100;
-                t.speed = Math.floor((Math.random() * 200) + speed/2);
+                t.speed = Math.floor((Math.random() * 300) + speed/2);
             }
             t.width = 50;
             t.height = 85;
@@ -341,6 +342,7 @@ function nextLevel() {
     */
     function end() {
         if (level >= 10) {
+            overlayImg.style.cssText = 'opacity: 1'
             overlayImg.src = 'images/win.png'
             container.style.cssText = 'opacity: 0'
             controlPad.style.cssText = 'opacity: 0'
